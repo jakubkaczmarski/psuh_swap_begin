@@ -2,13 +2,21 @@
 
 # define PUSH_SWAP_H
 
+#include "./Libft/libft.h"
+
 # include <stddef.h>
 
 #include <stdlib.h>
 
-#include "libft/libft.h"
+#include <stdio.h>
 
-#include "ft_printf/ft_printf.h"
+# include <fcntl.h>				//all of these out
+# include <sys/wait.h>
+# include <errno.h>
+# include <stdlib.h>
+# include <string.h>
+# include <unistd.h>
+# include <stdio.h>				//until here
 
 // #include "libft.a"
 // #include "libftprintf.a"
@@ -19,7 +27,20 @@
 // 	struct s_list	*next;
 // }	t_list;
 
-long int	ft_atolongi(const char *nptr);
+int	case_1_of_3_value_permutation(t_list **stack_a);
+int	case_2_of_3_value_permutation(t_list **stack_a);
+int	case_3_of_3_value_permutation(t_list **stack_a);
+int	case_4_of_3_value_permutation(t_list **stack_a);
+int	case_5_of_3_value_permutation(t_list **stack_a);
+int	sort_small(t_list **stack_a, t_list **stack_b, int argc);
+// long int	ft_atolong(const char *nptr);
+int		unvalid_value(int argc, char **argv);
+int		check_arguments(int argc, char **argv);
+long	ft_atolong(const char *nptr);
+void	reapply_values(t_list **stack_x, int max);
+void	print_stack(t_list *ptr);								//deletee before push
+int sortbigstack(t_list **stack_a, t_list **stack_b);
+t_list	*createinput(int argc, char **argv);
 void		freecontent(void *elem);
 void		operation_sa(t_list **stack_a);
 void		operation_sb(t_list **stack_b);

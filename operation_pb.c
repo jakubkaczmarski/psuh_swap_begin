@@ -10,4 +10,5 @@ void	operation_pb(t_list **stack_a, t_list **stack_b)
 		*stack_a = firstelem ->next;
 		ft_lstadd_front(stack_b, firstelem);
 	}
+	write(1, "pb\n", 3);
 }

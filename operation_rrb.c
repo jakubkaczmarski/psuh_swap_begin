@@ -19,4 +19,5 @@ void	operation_rrb(t_list **stack_b)
 		secondtolast -> next = NULL;
 		ft_lstadd_front(stack_b, last);
 	}
+	write(1, "rrb\n", 4);
 }

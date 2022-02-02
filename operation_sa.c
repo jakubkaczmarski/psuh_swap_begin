@@ -14,4 +14,5 @@ void	operation_sa(t_list **stack_a)
 		secondelement->next = firstelement;
 		firstelement->next = thirdelement;
 	}
+	write(1, "sa\n", 3);
 }
